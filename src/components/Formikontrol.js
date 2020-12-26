@@ -1,5 +1,6 @@
 import React from 'react'
 import CheckBoxGroup from './CheckBoxGroup';
+import DatePicker from './DatePicker';
 import Input from './Input'
 import RadioButtons from './RadioButtons';
 import Select from './Select';
@@ -18,6 +19,7 @@ const Formikontrol = (props) => {
         case 'checkbox':
             return <CheckBoxGroup {...rest} />
         case 'date':
+            return <DatePicker {...rest} />
         default: return null
     }
 }
