@@ -10,7 +10,6 @@ const CheckBoxGroup = (props) => {
             <Field name={name} id={name} {...rest}>
                 {
                     ({field}) => {
-                        console.log(field)
                         return options.map(option=>{
                             return (
                                 <React.Fragment key={option.key}>

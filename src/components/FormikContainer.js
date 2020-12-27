@@ -2,6 +2,7 @@ import React from 'react'
 import {Formik, Form } from 'formik'
 import * as Yup from 'yup'
 import Formikontrol from './Formikontrol'
+import { Link } from 'react-router-dom'
 
 const FormikContainer = () => {
     const dropdownOptions = [
@@ -85,6 +86,12 @@ const FormikContainer = () => {
                                 name='birthDate'
                             />
                             <button className="btn btn-danger" type='submit'>Submit</button>
+                            <Link to='/login' style={{padding:'0 1.5rem'}}>
+                                <a href="/login">Login page</a>
+                            </Link>
+                            <Link to='/register'>
+                                <a href="/register">Registration page</a>
+                            </Link>
                         </Form>
                     )
                 }
