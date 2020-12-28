@@ -1,5 +1,6 @@
 import FormikContainer from "./components/FormikContainer";
 import LoginForm from "./components/Login/LoginForm";
+import BasicTable from "./components/React-Table/BasicTable";
 import RegistrationForm from "./components/Registration/RegistrationForm";
 
 const routes = [
@@ -19,6 +20,12 @@ const routes = [
         path: '/register',
         name: 'Register Component',
         component: RegistrationForm,
+        exact : true
+    },
+    {
+        path: '/table',
+        name: 'Table Component',
+        component: BasicTable,
         exact : true
     },
 ]
