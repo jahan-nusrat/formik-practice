@@ -12,6 +12,14 @@ export const COLUMNS = [
         accessor : 'last_name'
     },
     {
+        Header : 'Email',
+        accessor : 'email'
+    },
+    {
+        Header : 'Age',
+        accessor : 'age'
+    },
+    {
         Header : 'Date of Birth',
         accessor : 'date_of_birth'
     },
