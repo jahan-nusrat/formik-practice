@@ -62,7 +62,7 @@
     background-color: #dddddd;
   }
 
-  table th{
+  table th, tfoot td{
     text-align: center;
     background-color: #4caf50;
     color: #fff;
