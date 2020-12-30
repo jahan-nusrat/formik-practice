@@ -1,6 +1,7 @@
 import FormikContainer from "./components/FormikContainer";
 import LoginForm from "./components/Login/LoginForm";
 import BasicTable from "./components/React-Table/BasicTable";
+import GlobalFiltering from "./components/React-Table/GlobalFiltering";
 import GroupedColTable from "./components/React-Table/GroupedColTable";
 import SortingTable from "./components/React-Table/SortingTable";
 import RegistrationForm from "./components/Registration/RegistrationForm";
@@ -41,7 +42,13 @@ const routes = [
         name: 'Sorting Table Component',
         component: SortingTable,
         exact : true
-    }
+    },
+    {
+        path: '/table/filter',
+        name: 'Global Filtering',
+        component: GlobalFiltering,
+        exact : true
+    },
 ]
 
 export default routes;
