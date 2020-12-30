@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react'
-import { useTable, useGlobalFilter } from 'react-table'
+import { useTable, useGlobalFilter, useFilters } from 'react-table'
 import DummyData from './dummy.json'
 import { COLUMNS } from './columns'
 import FilterTable from './FilterTable'
@@ -20,6 +20,7 @@ const GlobalFiltering = () => {
         columns,
         data
     },
+    useFilters,
     useGlobalFilter
     )
 
@@ -27,7 +28,7 @@ const GlobalFiltering = () => {
 
     return (
         <div>
-            <FilterTable filter={globalFilter} setFilter={setGlobalFilter} />
+            {<FilterTable filter={globalFilter} setFilter={setGlobalFilter} />}
             <table {...getTableProps()}>
                 <thead>
                 {
@@ -37,6 +38,9 @@ const GlobalFiltering = () => {
                                 headerGroup.headers.map(column => (
                                     <th {...column.getHeaderProps()}>
                                         {column.render('Header')}
+                                        <div>
+                                            { column.canFilter ? column.render('Filter') : null}
+                                        </div>
                                     </th>
                                 ))
                             }
